@@ -1,1 +1,1 @@
-web: gunicorn NERdashboard:server
+web: gunicorn app:server
