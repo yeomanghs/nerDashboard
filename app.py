@@ -112,12 +112,12 @@ graphPage = [
                             ])
             ]
 
-imageFile1 = "/pic/comparison.png"
+imageFile1 = "Wages_15to29.html"
 imagePage1 = html.Div(
                 [
                     html.Img(
 #                         src = app.get_asset_url("comparison.png"),
-                        src = imageFile1,
+                        src = app.get_asset_url(imageFile1),
                         style={'height':'50%', 'width':'80%'}
                             ),
                 ])
