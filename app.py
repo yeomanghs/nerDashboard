@@ -112,7 +112,7 @@ graphPage = [
                             ])
             ]
 
-imageFile1 = "Wages_15to29.html"
+imageFile1 = "comparison.mht"
 imagePage1 = html.Div(
                 [
                     html.Iframe(
