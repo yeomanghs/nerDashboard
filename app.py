@@ -50,7 +50,7 @@ for col in ['PERSON', 'ORG', 'Overall', 'NE']:
     resultDictCrf[col] = df2.query('Metric in @metricList')[col].values
     
 #Bootstrap themes
-app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP], static_folder = "./assets")
+app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
 server = app.server
 
 # the style arguments for the sidebar. We use position:fixed and a fixed width
@@ -112,10 +112,12 @@ graphPage = [
                             ])
             ]
 
+imageFile1 = "./assets/comparison.png"
 imagePage1 = html.Div(
                 [
                     html.Img(
-                        src = app.get_asset_url("comparison.png"),
+#                         src = app.get_asset_url("comparison.png"),
+                        src = imageFile1,
                         style={'height':'50%', 'width':'80%'}
                             ),
                 ])
