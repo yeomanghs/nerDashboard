@@ -116,7 +116,7 @@ imagePage1 = html.Div(
                 [
                     html.Iframe(
                         src = app.get_asset_url("comparison.html"),
-                        style={'height':"400px",'width':'80%'}
+                        style={'height':"500px",'width':'50%'}
                             ),
                 ])
 
@@ -124,7 +124,7 @@ imagePage2 = html.Div(
                 [
                     html.Iframe(
                         src = app.get_asset_url("processing.html"),
-                        style={'height':'400px', 'width':'70%'}
+                        style={'height':'500px', 'width':'50%'}
                             ),
                 ])
 
@@ -132,7 +132,7 @@ imagePage3 = html.Div(
                 [
                     html.Img(
                         src = app.get_asset_url("crfFeatures.png"),
-                        style={'height':'100%', 'width':'100%'}
+                        style={'height':'00%', 'width':'100%'}
                             ),
                 ])
 
@@ -176,14 +176,14 @@ app.layout = html.Div([dcc.Location(id = "url"), sidebar, content])
                     
 #callback on link
 @app.callback(
-    [Output(f"page-{i}-link", "active") for i in range(1, 6)],
+    [Output(f"page-{i}-link", "active") for i in range(1, 5)],
     [Input("url", "pathname")],
             )
 def toggle_active_links(pathname):
     if pathname == "/":
         # Treat page 1 as the homepage / index
         return True, False
-    return [pathname == f"/page-{i}" for i in range(1, 6)]
+    return [pathname == f"/page-{i}" for i in range(1, 5)]
                 
 #callback on page
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
@@ -204,21 +204,6 @@ def render_page_content(pathname):
             html.P(f"The pathname {pathname} was not recognised..."),
         ]
                         )
-
-#callback on text description, labels
-# @app.callback(
-#     [
-#     Output("rowCount", "children"),
-#     Output("text-description", 'children'),
-#     Output("realTable", "data"),
-#     Output("predTable", "data")
-#     ],
-#     [Input('clickNext', 'n_clicks')]
-#             )
-# def updateDescription(n_clicks):
-#     if n_clicks:
-#         return "Row: %s"%str(next(row) + 1), next(descIter), convertForm(next(tagDictList), 'RealTag'), \
-#     convertForm(next(tagDictList2), 'PredTagMunirah')
 
 #callback on graphs
 @app.callback(
