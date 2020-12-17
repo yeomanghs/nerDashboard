@@ -116,7 +116,7 @@ imagePage1 = html.Div(
                 [
                     html.Iframe(
                         src = app.get_asset_url("comparison.html"),
-                        style={'height':"400px",, 'width':'80%'}
+                        style={'height':"400px",'width':'80%'}
                             ),
                 ])
 
