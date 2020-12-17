@@ -116,16 +116,15 @@ imagePage1 = html.Div(
                 [
                     html.Iframe(
                         src = app.get_asset_url("comparison.html"),
-#                         src = app.get_asset_url(imageFile1),
-                        style={'height':'100%', 'width':'80%'}
+                        style={'height':"400px",, 'width':'80%'}
                             ),
                 ])
 
 imagePage2 = html.Div(
                 [
-                    html.Img(
+                    html.Iframe(
                         src = app.get_asset_url("processing.html"),
-                        style={'height':'100%', 'width':'70%'}
+                        style={'height':'400px', 'width':'70%'}
                             ),
                 ])
 
