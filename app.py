@@ -83,9 +83,8 @@ sidebar = html.Div(
             [
                 dbc.NavLink("Models Comparison", href="/page-1", id = "page-1-link"),
                 dbc.NavLink("CRF Flow", href="/page-2", id = "page-2-link"),
-                dbc.NavLink("CRF Features", href="/page-3", id = "page-3-link"),
-                dbc.NavLink("Evaluation", href="/page-4", id = "page-4-link"),
-                dbc.NavLink("Conclusion & Suggestion", href="/page-5", id = "page-5-link")
+                dbc.NavLink("Evaluation", href="/page-3", id = "page-3-link"),
+                dbc.NavLink("Conclusion & Suggestion", href="/page-4", id = "page-4-link")
             ],
             vertical = True,
             pills = True,
@@ -116,17 +115,17 @@ imageFile1 = "comparison.html"
 imagePage1 = html.Div(
                 [
                     html.Iframe(
-#                         src = app.get_asset_url("comparison.png"),
-                        src = app.get_asset_url(imageFile1),
-                        style={'height':'50%', 'width':'80%'}
+                        src = app.get_asset_url("comparison.html"),
+#                         src = app.get_asset_url(imageFile1),
+                        style={'height':'100%', 'width':'80%'}
                             ),
                 ])
 
 imagePage2 = html.Div(
                 [
                     html.Img(
-                        src = app.get_asset_url("/pic/processing.png"),
-                        style={'height':'50%', 'width':'70%'}
+                        src = app.get_asset_url("processing.html"),
+                        style={'height':'100%', 'width':'70%'}
                             ),
                 ])
 
@@ -195,10 +194,8 @@ def render_page_content(pathname):
     elif pathname == "/page-2":
         return imagePage2
     elif pathname == "/page-3":
-        return imagePage3
-    elif pathname == "/page-4":
         return graphPage
-    elif pathname == "/page-5":
+    elif pathname == "/page-4":
         return lastPage
 #         return textPage
     return dbc.Jumbotron(
