@@ -115,7 +115,7 @@ graphPage = [
 imagePage1 = html.Div(
                 [
                     html.Img(
-                        src = app.get_asset_url("comparison.PNG"),
+                        src = app.get_asset_url("comparison.png"),
                         style={'height':'50%', 'width':'80%'}
                             ),
                 ])
@@ -123,7 +123,7 @@ imagePage1 = html.Div(
 imagePage2 = html.Div(
                 [
                     html.Img(
-                        src = app.get_asset_url("processing.PNG"),
+                        src = app.get_asset_url("processing.png"),
                         style={'height':'50%', 'width':'70%'}
                             ),
                 ])
@@ -131,7 +131,7 @@ imagePage2 = html.Div(
 imagePage3 = html.Div(
                 [
                     html.Img(
-                        src = app.get_asset_url("crfFeatures.PNG"),
+                        src = app.get_asset_url("crfFeatures.png"),
                         style={'height':'100%', 'width':'100%'}
                             ),
                 ])
