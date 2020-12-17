@@ -112,7 +112,7 @@ graphPage = [
                             ])
             ]
 
-imageFile1 = "./assets/comparison.png"
+imageFile1 = "/assets/comparison.png"
 imagePage1 = html.Div(
                 [
                     html.Img(
@@ -125,7 +125,7 @@ imagePage1 = html.Div(
 imagePage2 = html.Div(
                 [
                     html.Img(
-                        src = app.get_asset_url("processing.png"),
+                        src = app.get_asset_url("/assets/processing.png"),
                         style={'height':'50%', 'width':'70%'}
                             ),
                 ])
