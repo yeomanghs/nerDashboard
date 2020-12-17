@@ -112,7 +112,7 @@ graphPage = [
                             ])
             ]
 
-imageFile1 = "comparison.mht"
+imageFile1 = "comparison.html"
 imagePage1 = html.Div(
                 [
                     html.Iframe(
